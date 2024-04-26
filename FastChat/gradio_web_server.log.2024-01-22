@@ -1,0 +1,21 @@
+2024-01-22 20:06:04 | ERROR | stderr | /data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/gradio/components/button.py:89: UserWarning: Using the update method is deprecated. Simply return a new object instead, e.g. `return gr.Button(...)` instead of `return gr.Button.update(...)`.
+2024-01-22 20:06:04 | ERROR | stderr |   warnings.warn(
+2024-01-22 20:06:04 | INFO | gradio_web_server | args: Namespace(host='0.0.0.0', port=None, share=False, controller_url='http://localhost:6006', concurrency_count=10, model_list_mode='once', moderate=False, show_terms_of_use=False, add_chatgpt=False, add_claude=False, add_palm=False, register_openai_compatible_models=None, gradio_auth_path=None, gradio_root_path=None)
+2024-01-22 20:06:04 | INFO | gradio_web_server | Models: ['vicuna-13b-v1.5']
+2024-01-22 20:06:04 | INFO | stdout | Running on local URL:  http://0.0.0.0:7860
+2024-01-22 20:06:04 | INFO | stdout | 
+2024-01-22 20:06:04 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-01-22 20:06:11 | INFO | gradio_web_server | load_demo. ip: 127.0.0.1. params: {}
+2024-01-22 20:06:11 | ERROR | stderr | /data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/gradio/components/dropdown.py:176: UserWarning: Using the update method is deprecated. Simply return a new object instead, e.g. `return gr.Dropdown(...)` instead of `return gr.Dropdown.update(...)`.
+2024-01-22 20:06:11 | ERROR | stderr |   warnings.warn(
+2024-01-22 20:06:16 | INFO | gradio_web_server | add_text. ip: 127.0.0.1. len: 5
+2024-01-22 20:06:16 | ERROR | stderr | /data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/asyncio/events.py:80: GradioUnusedKwargWarning: You have unused kwarg parameters in Button, please remove them: {'mode': 'static'}
+2024-01-22 20:06:16 | ERROR | stderr |   self._context.run(self._callback, *self._args)
+2024-01-22 20:06:16 | INFO | gradio_web_server | bot_response. ip: 127.0.0.1
+2024-01-22 20:06:16 | INFO | gradio_web_server | model_name: vicuna-13b-v1.5, worker_addr: http://localhost:21002
+2024-01-22 20:06:16 | INFO | gradio_web_server | ==== request ====
+{'model': 'vicuna-13b-v1.5', 'prompt': "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: hello ASSISTANT:", 'temperature': 0.7, 'repetition_penalty': 1.0, 'top_p': 1.0, 'max_new_tokens': 1024, 'stop': None, 'stop_token_ids': None, 'echo': False}
+2024-01-22 20:06:32 | ERROR | stderr | /data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/asyncio/events.py:80: GradioUnusedKwargWarning: You have unused kwarg parameters in Button, please remove them: {'mode': 'dynamic'}
+2024-01-22 20:06:32 | ERROR | stderr |   self._context.run(self._callback, *self._args)
+2024-01-22 20:06:32 | INFO | gradio_web_server | Hello! How can I help you today? Is there something specific you would like to discuss or ask about? I'm here to provide information and answer any questions you might have.
+2024-01-22 20:10:14 | INFO | stdout | Keyboard interruption in main thread... closing server.

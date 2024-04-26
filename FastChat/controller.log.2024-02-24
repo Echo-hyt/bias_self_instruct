@@ -1,0 +1,14 @@
+2024-02-24 17:29:42 | INFO | controller | args: Namespace(host='localhost', port=6006, dispatch_method='shortest_queue', ssl=False)
+2024-02-24 17:29:42 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m2786390[0m]
+2024-02-24 17:29:42 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-02-24 17:29:42 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-02-24 17:29:42 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:6006[0m (Press CTRL+C to quit)
+2024-02-24 17:29:49 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-02-24 17:29:50 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-02-24 17:29:50 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-02-24 17:29:50 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m2786390[0m]
+2024-02-24 17:29:50 | ERROR | stderr | Exception ignored in: <module 'threading' from '/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/threading.py'>
+2024-02-24 17:29:50 | ERROR | stderr | Traceback (most recent call last):
+2024-02-24 17:29:50 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/threading.py", line 1424, in _shutdown
+2024-02-24 17:29:50 | ERROR | stderr |     lock.acquire()
+2024-02-24 17:29:50 | ERROR | stderr | KeyboardInterrupt:

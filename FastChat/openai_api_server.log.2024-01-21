@@ -1,0 +1,1669 @@
+2024-01-20 17:08:18 | INFO | openai_api_server | args: Namespace(allow_credentials=False, allowed_headers=['*'], allowed_methods=['*'], allowed_origins=['*'], api_keys=None, controller_address='http://localhost:6006', host='localhost', port=8000, ssl=False)
+2024-01-20 17:08:18 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3570529[0m]
+2024-01-20 17:08:18 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-01-20 17:08:18 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-01-20 17:08:18 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+2024-01-20 17:09:21 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37962 - "[1mGET / HTTP/1.1[0m" [31m404 Not Found[0m
+2024-01-20 17:15:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38046 - "[1mPOST /v1/embeddings HTTP/1.1[0m" [32m200 OK[0m
+2024-01-20 17:15:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38046 - "[1mPOST /v1/embeddings HTTP/1.1[0m" [32m200 OK[0m
+2024-01-20 17:15:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38064 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-20 17:15:46 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 17:15:46 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 17:15:46 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     raise exc
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 17:15:46 | ERROR | stderr |     raise exc
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:15:46 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 17:15:46 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 17:15:46 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 17:15:46 | ERROR | stderr |     raise exc
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:15:46 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 17:15:46 | ERROR | stderr |     response = await func(request)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-20 17:15:46 | ERROR | stderr |     raise e
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 17:15:46 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 17:15:46 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-20 17:15:46 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-20 17:15:46 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-20 17:15:46 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38078 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-20 17:15:46 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 17:15:46 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 17:15:46 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     raise exc
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 17:15:46 | ERROR | stderr |     raise exc
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:15:46 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 17:15:46 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 17:15:46 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 17:15:46 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 17:15:46 | ERROR | stderr |     raise exc
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:15:46 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 17:15:46 | ERROR | stderr |     response = await func(request)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-20 17:15:46 | ERROR | stderr |     raise e
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 17:15:46 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 17:15:46 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 17:15:46 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-20 17:15:46 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-20 17:15:46 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-20 17:15:48 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38090 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-20 17:15:48 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 17:15:48 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 17:15:48 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 17:15:48 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 17:15:48 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 17:15:48 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-20 17:15:48 | ERROR | stderr |     raise exc
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 17:15:48 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 17:15:48 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 17:15:48 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 17:15:48 | ERROR | stderr |     raise exc
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:15:48 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 17:15:48 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 17:15:48 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 17:15:48 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 17:15:48 | ERROR | stderr |     raise exc
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:15:48 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 17:15:48 | ERROR | stderr |     response = await func(request)
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-20 17:15:48 | ERROR | stderr |     raise e
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 17:15:48 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 17:15:48 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 17:15:48 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-20 17:15:48 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-20 17:15:48 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-20 17:21:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38136 - "[1mPOST /v1/embeddings HTTP/1.1[0m" [32m200 OK[0m
+2024-01-20 17:21:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38136 - "[1mPOST /v1/embeddings HTTP/1.1[0m" [32m200 OK[0m
+2024-01-20 17:21:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38150 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-20 17:21:05 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 17:21:05 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 17:21:05 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 17:21:05 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 17:21:05 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 17:21:05 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-20 17:21:05 | ERROR | stderr |     raise exc
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 17:21:05 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 17:21:05 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 17:21:05 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 17:21:05 | ERROR | stderr |     raise exc
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:21:05 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 17:21:05 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 17:21:05 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 17:21:05 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 17:21:05 | ERROR | stderr |     raise exc
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:21:05 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 17:21:05 | ERROR | stderr |     response = await func(request)
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-20 17:21:05 | ERROR | stderr |     raise e
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 17:21:05 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 17:21:05 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 17:21:05 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-20 17:21:05 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-20 17:21:05 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-20 17:21:06 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38162 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-20 17:21:06 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 17:21:06 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 17:21:06 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 17:21:06 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 17:21:06 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 17:21:06 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-20 17:21:06 | ERROR | stderr |     raise exc
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 17:21:06 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 17:21:06 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 17:21:06 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 17:21:06 | ERROR | stderr |     raise exc
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:21:06 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 17:21:06 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 17:21:06 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 17:21:06 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 17:21:06 | ERROR | stderr |     raise exc
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:21:06 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 17:21:06 | ERROR | stderr |     response = await func(request)
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-20 17:21:06 | ERROR | stderr |     raise e
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 17:21:06 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 17:21:06 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 17:21:06 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-20 17:21:06 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-20 17:21:06 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-20 17:24:09 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38232 - "[1mPOST /completions HTTP/1.1[0m" [31m404 Not Found[0m
+2024-01-20 17:24:38 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38244 - "[1mPOST /v1completions HTTP/1.1[0m" [31m404 Not Found[0m
+2024-01-20 17:29:44 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38320 - "[1mPOST /v1/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-01-20 17:40:14 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38568 - "[1mGET / HTTP/1.1[0m" [31m404 Not Found[0m
+2024-01-20 17:41:36 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-01-20 17:41:36 | ERROR | stderr | [32mINFO[0m:     Waiting for background tasks to complete. (CTRL+C to force quit)
+2024-01-20 17:41:37 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3570529[0m]
+2024-01-20 17:41:37 | ERROR | stderr | [31mERROR[0m:    Traceback (most recent call last):
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 714, in lifespan
+2024-01-20 17:41:37 | ERROR | stderr |     await receive()
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+2024-01-20 17:41:37 | ERROR | stderr |     return await self.receive_queue.get()
+2024-01-20 17:41:37 | ERROR | stderr |   File "/opt/anaconda3/lib/python3.8/asyncio/queues.py", line 163, in get
+2024-01-20 17:41:37 | ERROR | stderr |     await getter
+2024-01-20 17:41:37 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 17:41:37 | ERROR | stderr | 
+2024-01-20 17:41:37 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 17:41:37 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 17:41:37 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:41:37 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 17:41:37 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:41:37 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 17:41:37 | ERROR | stderr |     response = await func(request)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 17:41:37 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 17:41:37 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 696, in create_embeddings
+2024-01-20 17:41:37 | ERROR | stderr |     embedding = await get_embedding(payload)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 724, in get_embedding
+2024-01-20 17:41:37 | ERROR | stderr |     embedding = await fetch_remote(worker_addr + "/worker_get_embeddings", payload)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 74, in fetch_remote
+2024-01-20 17:41:37 | ERROR | stderr |     async with session.post(url, json=pload) as response:
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/aiohttp/client.py", line 1187, in __aenter__
+2024-01-20 17:41:37 | ERROR | stderr |     self._resp = await self._coro
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/aiohttp/client.py", line 601, in _request
+2024-01-20 17:41:37 | ERROR | stderr |     await resp.start(conn)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 965, in start
+2024-01-20 17:41:37 | ERROR | stderr |     message, payload = await protocol.read()  # type: ignore[union-attr]
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/aiohttp/streams.py", line 622, in read
+2024-01-20 17:41:37 | ERROR | stderr |     await self._waiter
+2024-01-20 17:41:37 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 17:41:37 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 17:41:37 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 17:41:37 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:41:37 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 17:41:37 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:41:37 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 17:41:37 | ERROR | stderr |     response = await func(request)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 17:41:37 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 17:41:37 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 560, in create_completion
+2024-01-20 17:41:37 | ERROR | stderr |     all_tasks = await asyncio.gather(*text_completions)
+2024-01-20 17:41:37 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 17:41:37 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 17:41:37 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 17:41:37 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:41:37 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 17:41:37 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:41:37 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 17:41:37 | ERROR | stderr |     response = await func(request)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 17:41:37 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 17:41:37 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 560, in create_completion
+2024-01-20 17:41:37 | ERROR | stderr |     all_tasks = await asyncio.gather(*text_completions)
+2024-01-20 17:41:37 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 17:41:37 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 17:41:37 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 17:41:37 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:41:37 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 17:41:37 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:41:37 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 17:41:37 | ERROR | stderr |     response = await func(request)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 17:41:37 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 17:41:37 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 560, in create_completion
+2024-01-20 17:41:37 | ERROR | stderr |     all_tasks = await asyncio.gather(*text_completions)
+2024-01-20 17:41:37 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 17:41:37 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 17:41:37 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 17:41:37 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:41:37 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 17:41:37 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 17:41:37 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 17:41:37 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:41:37 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 17:41:37 | ERROR | stderr |     response = await func(request)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 17:41:37 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 17:41:37 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 17:41:37 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 560, in create_completion
+2024-01-20 17:41:37 | ERROR | stderr |     all_tasks = await asyncio.gather(*text_completions)
+2024-01-20 17:41:37 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 17:41:43 | INFO | openai_api_server | args: Namespace(allow_credentials=False, allowed_headers=['*'], allowed_methods=['*'], allowed_origins=['*'], api_keys=None, controller_address='http://localhost:6006', host='localhost', port=8000, ssl=False)
+2024-01-20 17:41:43 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3641073[0m]
+2024-01-20 17:41:43 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-01-20 17:41:43 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-01-20 17:41:43 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+2024-01-20 17:42:16 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38594 - "[1mGET / HTTP/1.1[0m" [31m404 Not Found[0m
+2024-01-20 17:42:37 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-01-20 17:42:37 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-01-20 17:42:37 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-01-20 17:42:37 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3641073[0m]
+2024-01-20 17:43:56 | INFO | openai_api_server | args: Namespace(allow_credentials=False, allowed_headers=['*'], allowed_methods=['*'], allowed_origins=['*'], api_keys=None, controller_address='http://localhost:6006', host='localhost', port=8080, ssl=False)
+2024-01-20 17:43:56 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3645589[0m]
+2024-01-20 17:43:56 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-01-20 17:43:56 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-01-20 17:43:56 | ERROR | stderr | [31mERROR[0m:    [Errno 98] error while attempting to bind on address ('127.0.0.1', 8080): address already in use
+2024-01-20 17:43:56 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-01-20 17:43:56 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-01-20 17:44:34 | INFO | openai_api_server | args: Namespace(allow_credentials=False, allowed_headers=['*'], allowed_methods=['*'], allowed_origins=['*'], api_keys=None, controller_address='http://localhost:6006', host='localhost', port=8001, ssl=False)
+2024-01-20 17:44:34 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3646963[0m]
+2024-01-20 17:44:34 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-01-20 17:44:34 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-01-20 17:44:34 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:8001[0m (Press CTRL+C to quit)
+2024-01-20 17:48:15 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-01-20 17:48:15 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-01-20 17:48:15 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-01-20 17:48:15 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3646963[0m]
+2024-01-20 17:48:17 | INFO | openai_api_server | args: Namespace(allow_credentials=False, allowed_headers=['*'], allowed_methods=['*'], allowed_origins=['*'], api_keys=None, controller_address='http://localhost:6006', host='localhost', port=8001, ssl=False)
+2024-01-20 17:48:17 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3654389[0m]
+2024-01-20 17:48:17 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-01-20 17:48:17 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-01-20 17:48:17 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:8001[0m (Press CTRL+C to quit)
+2024-01-20 17:51:44 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-01-20 17:51:45 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-01-20 17:51:45 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-01-20 17:51:45 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3654389[0m]
+2024-01-20 17:51:47 | INFO | openai_api_server | args: Namespace(allow_credentials=False, allowed_headers=['*'], allowed_methods=['*'], allowed_origins=['*'], api_keys=None, controller_address='http://localhost:6006', host='localhost', port=8001, ssl=False)
+2024-01-20 17:51:48 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3661456[0m]
+2024-01-20 17:51:48 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-01-20 17:51:48 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-01-20 17:51:48 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:8001[0m (Press CTRL+C to quit)
+2024-01-20 17:52:30 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-01-20 17:52:30 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-01-20 17:52:30 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-01-20 17:52:30 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3661456[0m]
+2024-01-20 17:52:38 | INFO | openai_api_server | args: Namespace(allow_credentials=False, allowed_headers=['*'], allowed_methods=['*'], allowed_origins=['*'], api_keys=None, controller_address='http://localhost:6006', host='localhost', port=8001, ssl=False)
+2024-01-20 17:52:38 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3663207[0m]
+2024-01-20 17:52:38 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-01-20 17:52:38 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-01-20 17:52:38 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:8001[0m (Press CTRL+C to quit)
+2024-01-20 17:57:53 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-01-20 17:57:53 | ERROR | stderr | [32mINFO[0m:     Waiting for connections to close. (CTRL+C to force quit)
+2024-01-20 17:57:56 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3663207[0m]
+2024-01-20 17:57:56 | ERROR | stderr | [31mERROR[0m:    Traceback (most recent call last):
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 714, in lifespan
+2024-01-20 17:57:56 | ERROR | stderr |     await receive()
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+2024-01-20 17:57:56 | ERROR | stderr |     return await self.receive_queue.get()
+2024-01-20 17:57:56 | ERROR | stderr |   File "/opt/anaconda3/lib/python3.8/asyncio/queues.py", line 163, in get
+2024-01-20 17:57:56 | ERROR | stderr |     await getter
+2024-01-20 17:57:56 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 17:57:56 | ERROR | stderr | 
+2024-01-20 17:57:56 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 17:57:56 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 17:57:56 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:57:56 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 17:57:56 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 17:57:56 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:57:56 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 17:57:56 | ERROR | stderr |     response = await func(request)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 17:57:56 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 17:57:56 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 560, in create_completion
+2024-01-20 17:57:56 | ERROR | stderr |     all_tasks = await asyncio.gather(*text_completions)
+2024-01-20 17:57:56 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 17:57:56 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 17:57:56 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 17:57:56 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:57:56 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 17:57:56 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 17:57:56 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:57:56 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 17:57:56 | ERROR | stderr |     response = await func(request)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 17:57:56 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 17:57:56 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 560, in create_completion
+2024-01-20 17:57:56 | ERROR | stderr |     all_tasks = await asyncio.gather(*text_completions)
+2024-01-20 17:57:56 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 17:57:56 | INFO | stdout | [32mINFO[0m:     127.0.0.1:56918 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-20 17:57:56 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 17:57:56 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 17:57:56 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:57:56 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 17:57:56 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 17:57:56 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 17:57:56 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 17:57:56 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 17:57:56 | ERROR | stderr |     response = await func(request)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 17:57:56 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 17:57:56 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 17:57:56 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 560, in create_completion
+2024-01-20 17:57:56 | ERROR | stderr |     all_tasks = await asyncio.gather(*text_completions)
+2024-01-20 17:57:56 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 17:57:56 | INFO | stdout | [32mINFO[0m:     127.0.0.1:56970 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-20 17:57:58 | INFO | openai_api_server | args: Namespace(allow_credentials=False, allowed_headers=['*'], allowed_methods=['*'], allowed_origins=['*'], api_keys=None, controller_address='http://localhost:6006', host='localhost', port=8001, ssl=False)
+2024-01-20 17:57:58 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3674122[0m]
+2024-01-20 17:57:58 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-01-20 17:57:58 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-01-20 17:57:58 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:8001[0m (Press CTRL+C to quit)
+2024-01-20 19:28:14 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-01-20 19:28:14 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-01-20 19:28:14 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-01-20 19:28:14 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3674122[0m]
+2024-01-20 19:38:09 | INFO | openai_api_server | args: Namespace(allow_credentials=False, allowed_headers=['*'], allowed_methods=['*'], allowed_origins=['*'], api_keys=None, controller_address='http://localhost:6006', host='localhost', port=8001, ssl=False)
+2024-01-20 19:38:09 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3877150[0m]
+2024-01-20 19:38:09 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-01-20 19:38:09 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-01-20 19:38:09 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:8001[0m (Press CTRL+C to quit)
+2024-01-20 19:42:00 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58430 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-20 19:42:00 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 19:42:00 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 19:42:00 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     raise exc
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 19:42:00 | ERROR | stderr |     raise exc
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 19:42:00 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 19:42:00 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 19:42:00 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 19:42:00 | ERROR | stderr |     raise exc
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 19:42:00 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 19:42:00 | ERROR | stderr |     response = await func(request)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-20 19:42:00 | ERROR | stderr |     raise e
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 19:42:00 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 19:42:00 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-20 19:42:00 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-20 19:42:00 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-20 19:42:00 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58444 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-20 19:42:00 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 19:42:00 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 19:42:00 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     raise exc
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 19:42:00 | ERROR | stderr |     raise exc
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 19:42:00 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 19:42:00 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 19:42:00 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 19:42:00 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 19:42:00 | ERROR | stderr |     raise exc
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 19:42:00 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 19:42:00 | ERROR | stderr |     response = await func(request)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-20 19:42:00 | ERROR | stderr |     raise e
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 19:42:00 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 19:42:00 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 19:42:00 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-20 19:42:00 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-20 19:42:00 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-20 19:42:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58458 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-20 19:42:02 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 19:42:02 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 19:42:02 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 19:42:02 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 19:42:02 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 19:42:02 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-20 19:42:02 | ERROR | stderr |     raise exc
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 19:42:02 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 19:42:02 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 19:42:02 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 19:42:02 | ERROR | stderr |     raise exc
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 19:42:02 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 19:42:02 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 19:42:02 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 19:42:02 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 19:42:02 | ERROR | stderr |     raise exc
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 19:42:02 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 19:42:02 | ERROR | stderr |     response = await func(request)
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-20 19:42:02 | ERROR | stderr |     raise e
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 19:42:02 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 19:42:02 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 19:42:02 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-20 19:42:02 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-20 19:42:02 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-20 20:06:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58968 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-20 20:06:59 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 20:06:59 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 20:06:59 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 20:06:59 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 20:06:59 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 20:06:59 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-20 20:06:59 | ERROR | stderr |     raise exc
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 20:06:59 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 20:06:59 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 20:06:59 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 20:06:59 | ERROR | stderr |     raise exc
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 20:06:59 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 20:06:59 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 20:06:59 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 20:06:59 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 20:06:59 | ERROR | stderr |     raise exc
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 20:06:59 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 20:06:59 | ERROR | stderr |     response = await func(request)
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-20 20:06:59 | ERROR | stderr |     raise e
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 20:06:59 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 20:06:59 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 20:06:59 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-20 20:06:59 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-20 20:06:59 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-20 20:07:00 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58980 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-20 20:07:00 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 20:07:00 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 20:07:00 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 20:07:00 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 20:07:00 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 20:07:00 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-20 20:07:00 | ERROR | stderr |     raise exc
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 20:07:00 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 20:07:00 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 20:07:00 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 20:07:00 | ERROR | stderr |     raise exc
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 20:07:00 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 20:07:00 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 20:07:00 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 20:07:00 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-20 20:07:00 | ERROR | stderr |     raise exc
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 20:07:00 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 20:07:00 | ERROR | stderr |     response = await func(request)
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-20 20:07:00 | ERROR | stderr |     raise e
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 20:07:00 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 20:07:00 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 20:07:00 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-20 20:07:00 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-20 20:07:00 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-20 20:15:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59088 - "[1mPOST /v1/completionscompletions HTTP/1.1[0m" [31m404 Not Found[0m
+2024-01-20 20:16:00 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59098 - "[1mPOST /completions HTTP/1.1[0m" [31m404 Not Found[0m
+2024-01-20 21:55:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60630 - "[1mPOST /v1completions HTTP/1.1[0m" [31m404 Not Found[0m
+2024-01-20 22:08:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60856 - "[1mGET /v1/models HTTP/1.1[0m" [32m200 OK[0m
+2024-01-20 22:13:04 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60922 - "[1mGET / HTTP/1.1[0m" [31m404 Not Found[0m
+2024-01-20 23:13:08 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-01-20 23:13:08 | ERROR | stderr | [32mINFO[0m:     Waiting for background tasks to complete. (CTRL+C to force quit)
+2024-01-20 23:13:09 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3877150[0m]
+2024-01-20 23:13:09 | ERROR | stderr | [31mERROR[0m:    Traceback (most recent call last):
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 714, in lifespan
+2024-01-20 23:13:09 | ERROR | stderr |     await receive()
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+2024-01-20 23:13:09 | ERROR | stderr |     return await self.receive_queue.get()
+2024-01-20 23:13:09 | ERROR | stderr |   File "/opt/anaconda3/lib/python3.8/asyncio/queues.py", line 163, in get
+2024-01-20 23:13:09 | ERROR | stderr |     await getter
+2024-01-20 23:13:09 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 23:13:09 | ERROR | stderr | 
+2024-01-20 23:13:09 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 23:13:09 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 23:13:09 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 23:13:09 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 23:13:09 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 23:13:09 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 23:13:09 | ERROR | stderr |     response = await func(request)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 23:13:09 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 23:13:09 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 696, in create_embeddings
+2024-01-20 23:13:09 | ERROR | stderr |     embedding = await get_embedding(payload)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 724, in get_embedding
+2024-01-20 23:13:09 | ERROR | stderr |     embedding = await fetch_remote(worker_addr + "/worker_get_embeddings", payload)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 74, in fetch_remote
+2024-01-20 23:13:09 | ERROR | stderr |     async with session.post(url, json=pload) as response:
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/aiohttp/client.py", line 1187, in __aenter__
+2024-01-20 23:13:09 | ERROR | stderr |     self._resp = await self._coro
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/aiohttp/client.py", line 601, in _request
+2024-01-20 23:13:09 | ERROR | stderr |     await resp.start(conn)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 965, in start
+2024-01-20 23:13:09 | ERROR | stderr |     message, payload = await protocol.read()  # type: ignore[union-attr]
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/aiohttp/streams.py", line 622, in read
+2024-01-20 23:13:09 | ERROR | stderr |     await self._waiter
+2024-01-20 23:13:09 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 23:13:09 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 23:13:09 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 23:13:09 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 23:13:09 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 23:13:09 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 23:13:09 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 23:13:09 | ERROR | stderr |     response = await func(request)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 23:13:09 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 23:13:09 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 560, in create_completion
+2024-01-20 23:13:09 | ERROR | stderr |     all_tasks = await asyncio.gather(*text_completions)
+2024-01-20 23:13:09 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 23:13:09 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 23:13:09 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 23:13:09 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 23:13:09 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 23:13:09 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 23:13:09 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 23:13:09 | ERROR | stderr |     response = await func(request)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 23:13:09 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 23:13:09 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 560, in create_completion
+2024-01-20 23:13:09 | ERROR | stderr |     all_tasks = await asyncio.gather(*text_completions)
+2024-01-20 23:13:09 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 23:13:09 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 23:13:09 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 23:13:09 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 23:13:09 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 23:13:09 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 23:13:09 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 23:13:09 | ERROR | stderr |     response = await func(request)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 23:13:09 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 23:13:09 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 560, in create_completion
+2024-01-20 23:13:09 | ERROR | stderr |     all_tasks = await asyncio.gather(*text_completions)
+2024-01-20 23:13:09 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 23:13:09 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 23:13:09 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 23:13:09 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 23:13:09 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 23:13:09 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 23:13:09 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 23:13:09 | ERROR | stderr |     response = await func(request)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 23:13:09 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 23:13:09 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 560, in create_completion
+2024-01-20 23:13:09 | ERROR | stderr |     all_tasks = await asyncio.gather(*text_completions)
+2024-01-20 23:13:09 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 23:13:09 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 23:13:09 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 23:13:09 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 23:13:09 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 23:13:09 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 23:13:09 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 23:13:09 | ERROR | stderr |     response = await func(request)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 23:13:09 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 23:13:09 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 429, in create_chat_completion
+2024-01-20 23:13:09 | ERROR | stderr |     all_tasks = await asyncio.gather(*chat_completions)
+2024-01-20 23:13:09 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 23:13:09 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-20 23:13:09 | ERROR | stderr | Traceback (most recent call last):
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-20 23:13:09 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 23:13:09 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-20 23:13:09 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-20 23:13:09 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-20 23:13:09 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-20 23:13:09 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-20 23:13:09 | ERROR | stderr |     response = await func(request)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-20 23:13:09 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-20 23:13:09 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-20 23:13:09 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 560, in create_completion
+2024-01-20 23:13:09 | ERROR | stderr |     all_tasks = await asyncio.gather(*text_completions)
+2024-01-20 23:13:09 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-01-20 23:30:00 | INFO | openai_api_server | args: Namespace(allow_credentials=False, allowed_headers=['*'], allowed_methods=['*'], allowed_origins=['*'], api_keys=None, controller_address='http://localhost:6006', host='localhost', port=8001, ssl=False)
+2024-01-20 23:30:00 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m95590[0m]
+2024-01-20 23:30:00 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-01-20 23:30:00 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-01-20 23:30:00 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:8001[0m (Press CTRL+C to quit)
+2024-01-20 23:35:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:33836 - "[1mGET / HTTP/1.1[0m" [31m404 Not Found[0m
+2024-01-20 23:39:00 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-01-20 23:39:00 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-01-20 23:39:00 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-01-20 23:39:00 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m95590[0m]
+2024-01-21 10:56:55 | INFO | openai_api_server | args: Namespace(allow_credentials=False, allowed_headers=['*'], allowed_methods=['*'], allowed_origins=['*'], api_keys=None, controller_address='http://localhost:6006', host='localhost', port=8001, ssl=False)
+2024-01-21 10:56:55 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m1212856[0m]
+2024-01-21 10:56:55 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-01-21 10:56:55 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-01-21 10:56:55 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:8001[0m (Press CTRL+C to quit)
+2024-01-21 11:01:26 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39342 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-21 11:01:28 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-21 11:01:28 | ERROR | stderr | Traceback (most recent call last):
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-21 11:01:28 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-21 11:01:28 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-21 11:01:28 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-21 11:01:28 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-21 11:01:28 | ERROR | stderr |     raise exc
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-21 11:01:28 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-21 11:01:28 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-21 11:01:28 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:01:28 | ERROR | stderr |     raise exc
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:01:28 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-21 11:01:28 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-21 11:01:28 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-21 11:01:28 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:01:28 | ERROR | stderr |     raise exc
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:01:28 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-21 11:01:28 | ERROR | stderr |     response = await func(request)
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-21 11:01:28 | ERROR | stderr |     raise e
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-21 11:01:28 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-21 11:01:28 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-21 11:01:28 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-21 11:01:28 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-21 11:01:28 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-21 11:01:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39356 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-21 11:01:30 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-21 11:01:30 | ERROR | stderr | Traceback (most recent call last):
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-21 11:01:30 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-21 11:01:30 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-21 11:01:30 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-21 11:01:30 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-21 11:01:30 | ERROR | stderr |     raise exc
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-21 11:01:30 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-21 11:01:30 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-21 11:01:30 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:01:30 | ERROR | stderr |     raise exc
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:01:30 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-21 11:01:30 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-21 11:01:30 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-21 11:01:30 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:01:30 | ERROR | stderr |     raise exc
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:01:30 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-21 11:01:30 | ERROR | stderr |     response = await func(request)
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-21 11:01:30 | ERROR | stderr |     raise e
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-21 11:01:30 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-21 11:01:30 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-21 11:01:30 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-21 11:01:30 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-21 11:01:30 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-21 11:02:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39438 - "[1mPOST /v1completions HTTP/1.1[0m" [31m404 Not Found[0m
+2024-01-21 11:13:58 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39556 - "[1mGET /v1/models HTTP/1.1[0m" [32m200 OK[0m
+2024-01-21 11:15:20 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39576 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-01-21 11:16:08 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39582 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-21 11:16:08 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-21 11:16:08 | ERROR | stderr | Traceback (most recent call last):
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-21 11:16:08 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-21 11:16:08 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-21 11:16:08 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-21 11:16:08 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-21 11:16:08 | ERROR | stderr |     raise exc
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-21 11:16:08 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-21 11:16:08 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-21 11:16:08 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:16:08 | ERROR | stderr |     raise exc
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:16:08 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-21 11:16:08 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-21 11:16:08 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-21 11:16:08 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:16:08 | ERROR | stderr |     raise exc
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:16:08 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-21 11:16:08 | ERROR | stderr |     response = await func(request)
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-21 11:16:08 | ERROR | stderr |     raise e
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-21 11:16:08 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-21 11:16:08 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-21 11:16:08 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 434, in create_chat_completion
+2024-01-21 11:16:08 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-21 11:16:08 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-21 11:17:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39600 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-21 11:17:13 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-21 11:17:13 | ERROR | stderr | Traceback (most recent call last):
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-21 11:17:13 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-21 11:17:13 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-21 11:17:13 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-21 11:17:13 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-21 11:17:13 | ERROR | stderr |     raise exc
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-21 11:17:13 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-21 11:17:13 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-21 11:17:13 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:17:13 | ERROR | stderr |     raise exc
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:17:13 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-21 11:17:13 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-21 11:17:13 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-21 11:17:13 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:17:13 | ERROR | stderr |     raise exc
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:17:13 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-21 11:17:13 | ERROR | stderr |     response = await func(request)
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-21 11:17:13 | ERROR | stderr |     raise e
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-21 11:17:13 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-21 11:17:13 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-21 11:17:13 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-21 11:17:13 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-21 11:17:13 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-21 11:21:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39668 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-21 11:21:45 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-21 11:21:45 | ERROR | stderr | Traceback (most recent call last):
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-21 11:21:45 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-21 11:21:45 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-21 11:21:45 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-21 11:21:45 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-21 11:21:45 | ERROR | stderr |     raise exc
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-21 11:21:45 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-21 11:21:45 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-21 11:21:45 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:21:45 | ERROR | stderr |     raise exc
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:21:45 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-21 11:21:45 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-21 11:21:45 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-21 11:21:45 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:21:45 | ERROR | stderr |     raise exc
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:21:45 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-21 11:21:45 | ERROR | stderr |     response = await func(request)
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-21 11:21:45 | ERROR | stderr |     raise e
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-21 11:21:45 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-21 11:21:45 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-21 11:21:45 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-21 11:21:45 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-21 11:21:45 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-21 11:34:09 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39810 - "[1mGET /v1/ HTTP/1.1[0m" [31m404 Not Found[0m
+2024-01-21 11:35:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39822 - "[1mGET /v1/models HTTP/1.1[0m" [32m200 OK[0m
+2024-01-21 11:49:41 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-21 11:49:41 | ERROR | stderr | Traceback (most recent call last):
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-21 11:49:41 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     raise exc
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     raise exc
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-21 11:49:41 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-21 11:49:41 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     raise exc
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-21 11:49:41 | ERROR | stderr |     response = await func(request)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-21 11:49:41 | ERROR | stderr |     raise e
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-21 11:49:41 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-21 11:49:41 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-21 11:49:41 | ERROR | stderr |     usage = UsageInfo()
+2024-01-21 11:49:41 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-21 11:49:41 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-21 11:49:41 | ERROR | stderr | Traceback (most recent call last):
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-21 11:49:41 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     raise exc
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     raise exc
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-21 11:49:41 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-21 11:49:41 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     raise exc
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-21 11:49:41 | ERROR | stderr |     response = await func(request)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-21 11:49:41 | ERROR | stderr |     raise e
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-21 11:49:41 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-21 11:49:41 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-21 11:49:41 | ERROR | stderr |     usage = UsageInfo()
+2024-01-21 11:49:41 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-21 11:49:41 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-21 11:49:41 | ERROR | stderr | Traceback (most recent call last):
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-21 11:49:41 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     raise exc
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     raise exc
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-21 11:49:41 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-21 11:49:41 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     raise exc
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-21 11:49:41 | ERROR | stderr |     response = await func(request)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-21 11:49:41 | ERROR | stderr |     raise e
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-21 11:49:41 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-21 11:49:41 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-21 11:49:41 | ERROR | stderr |     usage = UsageInfo()
+2024-01-21 11:49:41 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-21 11:49:41 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-21 11:49:41 | ERROR | stderr | Traceback (most recent call last):
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-21 11:49:41 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     raise exc
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     raise exc
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-21 11:49:41 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-21 11:49:41 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-21 11:49:41 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     raise exc
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:49:41 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-21 11:49:41 | ERROR | stderr |     response = await func(request)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-21 11:49:41 | ERROR | stderr |     raise e
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-21 11:49:41 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-21 11:49:41 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-21 11:49:41 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 567, in create_completion
+2024-01-21 11:49:41 | ERROR | stderr |     usage = UsageInfo()
+2024-01-21 11:49:41 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-21 11:49:53 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-01-21 11:49:53 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-01-21 11:49:53 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-01-21 11:49:53 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m1212856[0m]
+2024-01-21 11:53:05 | INFO | openai_api_server | args: Namespace(allow_credentials=False, allowed_headers=['*'], allowed_methods=['*'], allowed_origins=['*'], api_keys=None, controller_address='http://localhost:6006', host='localhost', port=8001, ssl=False)
+2024-01-21 11:53:05 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m1309118[0m]
+2024-01-21 11:53:05 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-01-21 11:53:05 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-01-21 11:53:05 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:8001[0m (Press CTRL+C to quit)
+2024-01-21 11:53:28 | INFO | stdout | Once upon a time
+2024-01-21 11:53:29 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40100 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-21 11:53:29 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-21 11:53:29 | ERROR | stderr | Traceback (most recent call last):
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-21 11:53:29 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     raise exc
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:53:29 | ERROR | stderr |     raise exc
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:53:29 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-21 11:53:29 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-21 11:53:29 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:53:29 | ERROR | stderr |     raise exc
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:53:29 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-21 11:53:29 | ERROR | stderr |     response = await func(request)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-21 11:53:29 | ERROR | stderr |     raise e
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-21 11:53:29 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-21 11:53:29 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 569, in create_completion
+2024-01-21 11:53:29 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-21 11:53:29 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-21 11:53:29 | INFO | stdout | Once upon a time
+2024-01-21 11:53:29 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40114 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-21 11:53:29 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-21 11:53:29 | ERROR | stderr | Traceback (most recent call last):
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-21 11:53:29 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     raise exc
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:53:29 | ERROR | stderr |     raise exc
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:53:29 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-21 11:53:29 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-21 11:53:29 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-21 11:53:29 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:53:29 | ERROR | stderr |     raise exc
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:53:29 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-21 11:53:29 | ERROR | stderr |     response = await func(request)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-21 11:53:29 | ERROR | stderr |     raise e
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-21 11:53:29 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-21 11:53:29 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-21 11:53:29 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 569, in create_completion
+2024-01-21 11:53:29 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-21 11:53:29 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-21 11:53:31 | INFO | stdout | Once upon a time
+2024-01-21 11:53:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40126 - "[1mPOST /v1/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2024-01-21 11:53:31 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-01-21 11:53:31 | ERROR | stderr | Traceback (most recent call last):
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+2024-01-21 11:53:31 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+2024-01-21 11:53:31 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-01-21 11:53:31 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/applications.py", line 116, in __call__
+2024-01-21 11:53:31 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-01-21 11:53:31 | ERROR | stderr |     raise exc
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-01-21 11:53:31 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/cors.py", line 83, in __call__
+2024-01-21 11:53:31 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2024-01-21 11:53:31 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:53:31 | ERROR | stderr |     raise exc
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:53:31 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 746, in __call__
+2024-01-21 11:53:31 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+2024-01-21 11:53:31 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 75, in app
+2024-01-21 11:53:31 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+2024-01-21 11:53:31 | ERROR | stderr |     raise exc
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+2024-01-21 11:53:31 | ERROR | stderr |     await app(scope, receive, sender)
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/starlette/routing.py", line 70, in app
+2024-01-21 11:53:31 | ERROR | stderr |     response = await func(request)
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 299, in app
+2024-01-21 11:53:31 | ERROR | stderr |     raise e
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 294, in app
+2024-01-21 11:53:31 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/.local/lib/python3.8/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-01-21 11:53:31 | ERROR | stderr |     return await dependant.call(**values)
+2024-01-21 11:53:31 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/openai_api_server.py", line 569, in create_completion
+2024-01-21 11:53:31 | ERROR | stderr |     if content["error_code"] != 0:
+2024-01-21 11:53:31 | ERROR | stderr | TypeError: string indices must be integers
+2024-01-21 11:55:43 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-01-21 11:55:43 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-01-21 11:55:43 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-01-21 11:55:43 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m1309118[0m]

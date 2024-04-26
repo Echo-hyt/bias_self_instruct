@@ -1,0 +1,466 @@
+2024-03-08 01:39:23 | ERROR | stderr | /data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/gradio/components/button.py:89: UserWarning: Using the update method is deprecated. Simply return a new object instead, e.g. `return gr.Button(...)` instead of `return gr.Button.update(...)`.
+2024-03-08 01:39:23 | ERROR | stderr |   warnings.warn(
+2024-03-08 01:39:23 | INFO | gradio_web_server | args: Namespace(host='0.0.0.0', port=None, share=False, controller_url='http://localhost:6006', concurrency_count=10, model_list_mode='once', moderate=False, show_terms_of_use=False, add_chatgpt=False, add_claude=False, add_palm=False, register_openai_compatible_models=None, gradio_auth_path=None, gradio_root_path=None)
+2024-03-08 01:39:23 | ERROR | stderr | Traceback (most recent call last):
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/connection.py", line 203, in _new_conn
+2024-03-08 01:39:23 | ERROR | stderr |     sock = connection.create_connection(
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+2024-03-08 01:39:23 | ERROR | stderr |     raise err
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/util/connection.py", line 73, in create_connection
+2024-03-08 01:39:23 | ERROR | stderr |     sock.connect(sa)
+2024-03-08 01:39:23 | ERROR | stderr | ConnectionRefusedError: [Errno 111] Connection refused
+2024-03-08 01:39:23 | ERROR | stderr | 
+2024-03-08 01:39:23 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2024-03-08 01:39:23 | ERROR | stderr | 
+2024-03-08 01:39:23 | ERROR | stderr | Traceback (most recent call last):
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+2024-03-08 01:39:23 | ERROR | stderr |     response = self._make_request(
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+2024-03-08 01:39:23 | ERROR | stderr |     conn.request(
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/connection.py", line 395, in request
+2024-03-08 01:39:23 | ERROR | stderr |     self.endheaders()
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/http/client.py", line 1250, in endheaders
+2024-03-08 01:39:23 | ERROR | stderr |     self._send_output(message_body, encode_chunked=encode_chunked)
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/http/client.py", line 1010, in _send_output
+2024-03-08 01:39:23 | ERROR | stderr |     self.send(msg)
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/http/client.py", line 950, in send
+2024-03-08 01:39:23 | ERROR | stderr |     self.connect()
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/connection.py", line 243, in connect
+2024-03-08 01:39:23 | ERROR | stderr |     self.sock = self._new_conn()
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/connection.py", line 218, in _new_conn
+2024-03-08 01:39:23 | ERROR | stderr |     raise NewConnectionError(
+2024-03-08 01:39:23 | ERROR | stderr | urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f7773fc7d60>: Failed to establish a new connection: [Errno 111] Connection refused
+2024-03-08 01:39:23 | ERROR | stderr | 
+2024-03-08 01:39:23 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2024-03-08 01:39:23 | ERROR | stderr | 
+2024-03-08 01:39:23 | ERROR | stderr | Traceback (most recent call last):
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+2024-03-08 01:39:23 | ERROR | stderr |     resp = conn.urlopen(
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+2024-03-08 01:39:23 | ERROR | stderr |     retries = retries.increment(
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/util/retry.py", line 515, in increment
+2024-03-08 01:39:23 | ERROR | stderr |     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+2024-03-08 01:39:23 | ERROR | stderr | urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /refresh_all_workers (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7773fc7d60>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-03-08 01:39:23 | ERROR | stderr | 
+2024-03-08 01:39:23 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-03-08 01:39:23 | ERROR | stderr | 
+2024-03-08 01:39:23 | ERROR | stderr | Traceback (most recent call last):
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+2024-03-08 01:39:23 | ERROR | stderr |     return _run_code(code, main_globals, None,
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/runpy.py", line 87, in _run_code
+2024-03-08 01:39:23 | ERROR | stderr |     exec(code, run_globals)
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/gradio_web_server.py", line 877, in <module>
+2024-03-08 01:39:23 | ERROR | stderr |     models = get_model_list(
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/gradio_web_server.py", line 128, in get_model_list
+2024-03-08 01:39:23 | ERROR | stderr |     ret = requests.post(controller_url + "/refresh_all_workers")
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/requests/api.py", line 115, in post
+2024-03-08 01:39:23 | ERROR | stderr |     return request("post", url, data=data, json=json, **kwargs)
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/requests/api.py", line 59, in request
+2024-03-08 01:39:23 | ERROR | stderr |     return session.request(method=method, url=url, **kwargs)
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+2024-03-08 01:39:23 | ERROR | stderr |     resp = self.send(prep, **send_kwargs)
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+2024-03-08 01:39:23 | ERROR | stderr |     r = adapter.send(request, **kwargs)
+2024-03-08 01:39:23 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/requests/adapters.py", line 519, in send
+2024-03-08 01:39:23 | ERROR | stderr |     raise ConnectionError(e, request=request)
+2024-03-08 01:39:23 | ERROR | stderr | requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /refresh_all_workers (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7773fc7d60>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-03-08 01:41:42 | ERROR | stderr | /data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/gradio/components/button.py:89: UserWarning: Using the update method is deprecated. Simply return a new object instead, e.g. `return gr.Button(...)` instead of `return gr.Button.update(...)`.
+2024-03-08 01:41:42 | ERROR | stderr |   warnings.warn(
+2024-03-08 01:41:42 | INFO | gradio_web_server | args: Namespace(host='0.0.0.0', port=11004, share=False, controller_url='http://localhost:6006', concurrency_count=10, model_list_mode='once', moderate=False, show_terms_of_use=False, add_chatgpt=False, add_claude=False, add_palm=False, register_openai_compatible_models=None, gradio_auth_path=None, gradio_root_path=None)
+2024-03-08 01:41:42 | ERROR | stderr | Traceback (most recent call last):
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/connection.py", line 203, in _new_conn
+2024-03-08 01:41:42 | ERROR | stderr |     sock = connection.create_connection(
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+2024-03-08 01:41:42 | ERROR | stderr |     raise err
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/util/connection.py", line 73, in create_connection
+2024-03-08 01:41:42 | ERROR | stderr |     sock.connect(sa)
+2024-03-08 01:41:42 | ERROR | stderr | ConnectionRefusedError: [Errno 111] Connection refused
+2024-03-08 01:41:42 | ERROR | stderr | 
+2024-03-08 01:41:42 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2024-03-08 01:41:42 | ERROR | stderr | 
+2024-03-08 01:41:42 | ERROR | stderr | Traceback (most recent call last):
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+2024-03-08 01:41:42 | ERROR | stderr |     response = self._make_request(
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+2024-03-08 01:41:42 | ERROR | stderr |     conn.request(
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/connection.py", line 395, in request
+2024-03-08 01:41:42 | ERROR | stderr |     self.endheaders()
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/http/client.py", line 1250, in endheaders
+2024-03-08 01:41:42 | ERROR | stderr |     self._send_output(message_body, encode_chunked=encode_chunked)
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/http/client.py", line 1010, in _send_output
+2024-03-08 01:41:42 | ERROR | stderr |     self.send(msg)
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/http/client.py", line 950, in send
+2024-03-08 01:41:42 | ERROR | stderr |     self.connect()
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/connection.py", line 243, in connect
+2024-03-08 01:41:42 | ERROR | stderr |     self.sock = self._new_conn()
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/connection.py", line 218, in _new_conn
+2024-03-08 01:41:42 | ERROR | stderr |     raise NewConnectionError(
+2024-03-08 01:41:42 | ERROR | stderr | urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd7f5e896a0>: Failed to establish a new connection: [Errno 111] Connection refused
+2024-03-08 01:41:42 | ERROR | stderr | 
+2024-03-08 01:41:42 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2024-03-08 01:41:42 | ERROR | stderr | 
+2024-03-08 01:41:42 | ERROR | stderr | Traceback (most recent call last):
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+2024-03-08 01:41:42 | ERROR | stderr |     resp = conn.urlopen(
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+2024-03-08 01:41:42 | ERROR | stderr |     retries = retries.increment(
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/urllib3/util/retry.py", line 515, in increment
+2024-03-08 01:41:42 | ERROR | stderr |     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+2024-03-08 01:41:42 | ERROR | stderr | urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /refresh_all_workers (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd7f5e896a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-03-08 01:41:42 | ERROR | stderr | 
+2024-03-08 01:41:42 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-03-08 01:41:42 | ERROR | stderr | 
+2024-03-08 01:41:42 | ERROR | stderr | Traceback (most recent call last):
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+2024-03-08 01:41:42 | ERROR | stderr |     return _run_code(code, main_globals, None,
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/runpy.py", line 87, in _run_code
+2024-03-08 01:41:42 | ERROR | stderr |     exec(code, run_globals)
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/gradio_web_server.py", line 877, in <module>
+2024-03-08 01:41:42 | ERROR | stderr |     models = get_model_list(
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/FastChat/fastchat/serve/gradio_web_server.py", line 128, in get_model_list
+2024-03-08 01:41:42 | ERROR | stderr |     ret = requests.post(controller_url + "/refresh_all_workers")
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/requests/api.py", line 115, in post
+2024-03-08 01:41:42 | ERROR | stderr |     return request("post", url, data=data, json=json, **kwargs)
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/requests/api.py", line 59, in request
+2024-03-08 01:41:42 | ERROR | stderr |     return session.request(method=method, url=url, **kwargs)
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+2024-03-08 01:41:42 | ERROR | stderr |     resp = self.send(prep, **send_kwargs)
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+2024-03-08 01:41:42 | ERROR | stderr |     r = adapter.send(request, **kwargs)
+2024-03-08 01:41:42 | ERROR | stderr |   File "/data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/requests/adapters.py", line 519, in send
+2024-03-08 01:41:42 | ERROR | stderr |     raise ConnectionError(e, request=request)
+2024-03-08 01:41:42 | ERROR | stderr | requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=6006): Max retries exceeded with url: /refresh_all_workers (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd7f5e896a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-03-08 01:43:17 | ERROR | stderr | /data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/gradio/components/button.py:89: UserWarning: Using the update method is deprecated. Simply return a new object instead, e.g. `return gr.Button(...)` instead of `return gr.Button.update(...)`.
+2024-03-08 01:43:17 | ERROR | stderr |   warnings.warn(
+2024-03-08 01:43:17 | INFO | stdout | usage: gradio_web_server.py [-h] [--host HOST] [--port PORT] [--share] [--controller-url CONTROLLER_URL]
+2024-03-08 01:43:17 | INFO | stdout |                             [--concurrency-count CONCURRENCY_COUNT] [--model-list-mode {once,reload}]
+2024-03-08 01:43:17 | INFO | stdout |                             [--moderate] [--show-terms-of-use] [--add-chatgpt] [--add-claude]
+2024-03-08 01:43:17 | INFO | stdout |                             [--add-palm]
+2024-03-08 01:43:17 | INFO | stdout |                             [--register-openai-compatible-models REGISTER_OPENAI_COMPATIBLE_MODELS]
+2024-03-08 01:43:17 | INFO | stdout |                             [--gradio-auth-path GRADIO_AUTH_PATH] [--gradio-root-path GRADIO_ROOT_PATH]
+2024-03-08 01:43:17 | INFO | stdout | 
+2024-03-08 01:43:17 | INFO | stdout | optional arguments:
+2024-03-08 01:43:17 | INFO | stdout |   -h, --help            show this help message and exit
+2024-03-08 01:43:17 | INFO | stdout |   --host HOST
+2024-03-08 01:43:17 | INFO | stdout |   --port PORT
+2024-03-08 01:43:17 | INFO | stdout |   --share               Whether to generate a public, shareable link
+2024-03-08 01:43:17 | INFO | stdout |   --controller-url CONTROLLER_URL
+2024-03-08 01:43:17 | INFO | stdout |                         The address of the controller
+2024-03-08 01:43:17 | INFO | stdout |   --concurrency-count CONCURRENCY_COUNT
+2024-03-08 01:43:17 | INFO | stdout |                         The concurrency count of the gradio queue
+2024-03-08 01:43:17 | INFO | stdout |   --model-list-mode {once,reload}
+2024-03-08 01:43:17 | INFO | stdout |                         Whether to load the model list once or reload the model list every time
+2024-03-08 01:43:17 | INFO | stdout |   --moderate            Enable content moderation to block unsafe inputs
+2024-03-08 01:43:17 | INFO | stdout |   --show-terms-of-use   Shows term of use before loading the demo
+2024-03-08 01:43:17 | INFO | stdout |   --add-chatgpt         Add OpenAI's ChatGPT models (gpt-3.5-turbo, gpt-4)
+2024-03-08 01:43:17 | INFO | stdout |   --add-claude          Add Anthropic's Claude models (claude-2, claude-instant-1)
+2024-03-08 01:43:17 | INFO | stdout |   --add-palm            Add Google's PaLM model (PaLM 2 for Chat: chat-bison@001)
+2024-03-08 01:43:17 | INFO | stdout |   --register-openai-compatible-models REGISTER_OPENAI_COMPATIBLE_MODELS
+2024-03-08 01:43:17 | INFO | stdout |                         Register custom OpenAI API compatible models by loading them from a JSON file
+2024-03-08 01:43:17 | INFO | stdout |   --gradio-auth-path GRADIO_AUTH_PATH
+2024-03-08 01:43:17 | INFO | stdout |                         Set the gradio authentication file path. The file should contain one or more
+2024-03-08 01:43:17 | INFO | stdout |                         user:password pairs in this format: "u1:p1,u2:p2,u3:p3"
+2024-03-08 01:43:17 | INFO | stdout |   --gradio-root-path GRADIO_ROOT_PATH
+2024-03-08 01:43:17 | INFO | stdout |                         Sets the gradio root path, eg /abc/def. Useful when running behind a reverse-
+2024-03-08 01:43:17 | INFO | stdout |                         proxy or at a custom URL path prefix
+2024-03-08 01:44:07 | ERROR | stderr | /data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/gradio/components/button.py:89: UserWarning: Using the update method is deprecated. Simply return a new object instead, e.g. `return gr.Button(...)` instead of `return gr.Button.update(...)`.
+2024-03-08 01:44:07 | ERROR | stderr |   warnings.warn(
+2024-03-08 01:44:07 | INFO | gradio_web_server | args: Namespace(host='0.0.0.0', port=11004, share=False, controller_url='http://localhost:11001', concurrency_count=10, model_list_mode='once', moderate=False, show_terms_of_use=False, add_chatgpt=False, add_claude=False, add_palm=False, register_openai_compatible_models=None, gradio_auth_path=None, gradio_root_path=None)
+2024-03-08 01:44:07 | INFO | gradio_web_server | Models: ['Llama-2-7b-hf']
+2024-03-08 01:44:07 | INFO | stdout | Running on local URL:  http://0.0.0.0:11004
+2024-03-08 01:44:07 | INFO | stdout | 
+2024-03-08 01:44:07 | INFO | stdout | To create a public link, set `share=True` in `launch()`.
+2024-03-08 01:44:29 | INFO | gradio_web_server | load_demo. ip: 127.0.0.1. params: {}
+2024-03-08 01:44:29 | ERROR | stderr | /data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/site-packages/gradio/components/dropdown.py:176: UserWarning: Using the update method is deprecated. Simply return a new object instead, e.g. `return gr.Dropdown(...)` instead of `return gr.Dropdown.update(...)`.
+2024-03-08 01:44:29 | ERROR | stderr |   warnings.warn(
+2024-03-08 01:44:35 | INFO | gradio_web_server | add_text. ip: 127.0.0.1. len: 5
+2024-03-08 01:44:35 | ERROR | stderr | /data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/asyncio/events.py:80: GradioUnusedKwargWarning: You have unused kwarg parameters in Button, please remove them: {'mode': 'static'}
+2024-03-08 01:44:35 | ERROR | stderr |   self._context.run(self._callback, *self._args)
+2024-03-08 01:44:35 | INFO | gradio_web_server | bot_response. ip: 127.0.0.1
+2024-03-08 01:44:35 | INFO | gradio_web_server | model_name: Llama-2-7b-hf, worker_addr: http://localhost:11002
+2024-03-08 01:44:35 | INFO | gradio_web_server | ==== request ====
+{'model': 'Llama-2-7b-hf', 'prompt': '[INST] hello [/INST]', 'temperature': 0.7, 'repetition_penalty': 1.0, 'top_p': 1.0, 'max_new_tokens': 1024, 'stop': None, 'stop_token_ids': None, 'echo': False}
+2024-03-08 01:45:17 | ERROR | stderr | /data/workspace/huangyuting/.conda/envs/torch110/lib/python3.9/asyncio/events.py:80: GradioUnusedKwargWarning: You have unused kwarg parameters in Button, please remove them: {'mode': 'dynamic'}
+2024-03-08 01:45:17 | ERROR | stderr |   self._context.run(self._callback, *self._args)
+2024-03-08 01:45:17 | INFO | gradio_web_server | #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
+#include <cctype>
+#include <ctime>
+
+
+class C_Faculdade
+{
+private:
+	char nome[100];
+	char endereco[100];
+	char numero[100];
+	char cidade[100];
+	char estado[100];
+	char cep[100];
+
+public:
+	void set(char* nome, char* endereco, char* numero, char* cidade, char* estado, char* cep);
+	void print();
+};
+
+void C_Faculdade::set(char* nome, char* endereco, char* numero, char* cidade, char* estado, char* cep)
+{
+	strcpy_s(nome, 100, nome);
+	strcpy_s(endereco, 100, endereco);
+	strcpy_s(numero, 100, numero);
+	strcpy_s(cidade, 100, cidade);
+	strcpy_s(estado, 100, estado);
+	strcpy_s(cep, 100, cep);
+
+}
+
+void C_Faculdade::print()
+{
+	std::cout << nome << " " << endereco << " " << numero << " " << cidade << " " << estado << " " << cep << std::endl;
+}
+
+int main(int argc, char* argv[])
+{
+	C_Faculdade faculdade;
+	
+	faculdade.set(argv[1], argv[2], argv[3], argv[4], argv[5], argv[6]);
+	faculdade.print();
+
+	return 0;
+}
+
+
+
+
+//#include <iostream>
+//#include <fstream>
+//#include <sstream>
+//#include <string>
+//#include <cstdlib>
+//#include <cstdio>
+//#include <cstring>
+//#include <cctype>
+//#include <ctime>
+
+//
+//class C_Faculdade
+//{
+//private:
+//	char nome[100];
+//	char endereco[100];
+//	char numero[100];
+//	char cidade[100];
+//	char estado[100];
+//	char cep[100];
+//
+//public:
+//	void set(char* nome, char* endereco, char* numero, char* cidade, char* estado, char* cep);
+//	void print();
+//};
+//
+//void C_Faculdade::set(char* nome, char* endereco, char* numero, char* cidade, char* estado, char* cep)
+//{
+//	strcpy_s(nome, 100, nome);
+//	strcpy_s(endereco, 100, endereco);
+//	strcpy_s(numero, 100, numero);
+//	strcpy_s(cidade, 100, cidade);
+//	strcpy_s(estado, 100, estado);
+//	strcpy_s(cep, 100, cep);
+//
+//}
+//
+//void C_Faculdade::print()
+//{
+//	std::cout << nome << " " << endereco << " " << numero << " " << cidade << " " << estado << " " << cep << std::endl;
+//}
+//
+//int main(int argc, char* argv[])
+//{
+//	C_Faculdade faculdade;
+//
+//	faculdade.set(argv[1], argv[2], argv[3], argv[4], argv[5], argv[6]);
+//	faculdade.print();
+//
+//	return 0;
+//}
+2024-03-08 01:45:33 | INFO | gradio_web_server | add_text. ip: 127.0.0.1. len: 2
+2024-03-08 01:45:33 | INFO | gradio_web_server | bot_response. ip: 127.0.0.1
+2024-03-08 01:45:33 | INFO | gradio_web_server | model_name: Llama-2-7b-hf, worker_addr: http://localhost:11002
+2024-03-08 01:45:33 | INFO | gradio_web_server | ==== request ====
+{'model': 'Llama-2-7b-hf', 'prompt': '[INST] hello [/INST] #include <iostream>\n#include <fstream>\n#include <sstream>\n#include <string>\n#include <cstdlib>\n#include <cstdio>\n#include <cstring>\n#include <cctype>\n#include <ctime>\n\n\nclass C_Faculdade\n{\nprivate:\n\tchar nome[100];\n\tchar endereco[100];\n\tchar numero[100];\n\tchar cidade[100];\n\tchar estado[100];\n\tchar cep[100];\n\npublic:\n\tvoid set(char* nome, char* endereco, char* numero, char* cidade, char* estado, char* cep);\n\tvoid print();\n};\n\nvoid C_Faculdade::set(char* nome, char* endereco, char* numero, char* cidade, char* estado, char* cep)\n{\n\tstrcpy_s(nome, 100, nome);\n\tstrcpy_s(endereco, 100, endereco);\n\tstrcpy_s(numero, 100, numero);\n\tstrcpy_s(cidade, 100, cidade);\n\tstrcpy_s(estado, 100, estado);\n\tstrcpy_s(cep, 100, cep);\n\n}\n\nvoid C_Faculdade::print()\n{\n\tstd::cout << nome << " " << endereco << " " << numero << " " << cidade << " " << estado << " " << cep << std::endl;\n}\n\nint main(int argc, char* argv[])\n{\n\tC_Faculdade faculdade;\n\t\n\tfaculdade.set(argv[1], argv[2], argv[3], argv[4], argv[5], argv[6]);\n\tfaculdade.print();\n\n\treturn 0;\n}\n\n\n\n\n//#include <iostream>\n//#include <fstream>\n//#include <sstream>\n//#include <string>\n//#include <cstdlib>\n//#include <cstdio>\n//#include <cstring>\n//#include <cctype>\n//#include <ctime>\n\n//\n//class C_Faculdade\n//{\n//private:\n//\tchar nome[100];\n//\tchar endereco[100];\n//\tchar numero[100];\n//\tchar cidade[100];\n//\tchar estado[100];\n//\tchar cep[100];\n//\n//public:\n//\tvoid set(char* nome, char* endereco, char* numero, char* cidade, char* estado, char* cep);\n//\tvoid print();\n//};\n//\n//void C_Faculdade::set(char* nome, char* endereco, char* numero, char* cidade, char* estado, char* cep)\n//{\n//\tstrcpy_s(nome, 100, nome);\n//\tstrcpy_s(endereco, 100, endereco);\n//\tstrcpy_s(numero, 100, numero);\n//\tstrcpy_s(cidade, 100, cidade);\n//\tstrcpy_s(estado, 100, estado);\n//\tstrcpy_s(cep, 100, cep);\n//\n//}\n//\n//void C_Faculdade::print()\n//{\n//\tstd::cout << nome << " " << endereco << " " << numero << " " << cidade << " " << estado << " " << cep << std::endl;\n//}\n//\n//int main(int argc, char* argv[])\n//{\n//\tC_Faculdade faculdade;\n//\n//\tfaculdade.set(argv[1], argv[2], argv[3], argv[4], argv[5], argv[6]);\n//\tfaculdade.print();\n//\n//\treturn 0;\n//} </s><s>[INST] 你好 [/INST]', 'temperature': 0.7, 'repetition_penalty': 1.0, 'top_p': 1.0, 'max_new_tokens': 1024, 'stop': None, 'stop_token_ids': None, 'echo': False}
+2024-03-08 01:46:20 | INFO | gradio_web_server | [INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST] 你好 [/INST]
+
+[INST
