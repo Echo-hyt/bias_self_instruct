@@ -7,25 +7,36 @@ model path is the file path where gemma-7b is located
 ### Generate data
 
 1. Generate instructions from the seed tasks
-
-./scripts/generate_instructions.sh
+    ```
+    ./scripts/generate_instructions.sh
+    ```
 
 2. Identify whether the instruction represents a classification task or not
 
-./scripts/is_clf_or_not.sh
+    ```
+    ./scripts/is_clf_or_not.sh
+    ```
 
 3. Generate instances for each instruction
 
-./scripts/generate_instances.sh
+    ```
+    ./scripts/generate_instances.sh
+    ```
 
 4. Filtering, processing, and reformatting
-
-./scripts/prepare_for_finetuning.sh
+    ```
+    ./scripts/prepare_for_finetuning.sh
+    ```
 
 If you want to execute four scripts in one click 
 
+```
 ./scripts/all.sh
+```
 
 Number "2000" in the first scripts is the number of data generated at one time, and number "1" in other  scripts is the batch size.
 
 data/gender.jsonl is the seed task path
+
+### labeling
+The last row of the script all.sh - python . /self_instruct/label.py is the function that types the label. $1 and $2 are the paths to the files you want to generate with and without bias, respectively
