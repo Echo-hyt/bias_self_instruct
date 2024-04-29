@@ -192,7 +192,7 @@ if __name__ == "__main__":
                 random.shuffle(prompt_instructions)
                 prompt = encode_prompt(prompt_instructions, classification=args.use_clf_seed_tasks_only)
                 batch_inputs.append(prompt)
-            print('111111111111111')
+            # print('111111111111111')
             results = make_gpt3_requests(
                 engine=args.engine,
                 prompts=batch_inputs,
@@ -234,12 +234,12 @@ if __name__ == "__main__":
                 with Pool(4) as p:
                     rouge_scores = p.map(partial(scorer.score, inst), seed_instructions + machine_instructions)
                 rouge_scores = [score["rougeL"].fmeasure for score in rouge_scores]
-                print(max(rouge_scores))
+                # print(max(rouge_scores))
                 # rouge_scores = [scorer.score(inst, e_inst)["rougeL"].fmeasure for e_inst in human_instructions + machine_instructions]
                 # print('strstrstsr')
-                if max(rouge_scores) > 0.8:
+                if max(rouge_scores) > 0.7:
                     continue
-                print('conconcocncon')
+                # print('conconcocncon')
                 all_instructions = seed_instructions + machine_instructions
                 most_similar_instructions = {
                         all_instructions[i] : rouge_scores[i] for i in np.argsort(rouge_scores)[-10:][::-1]
