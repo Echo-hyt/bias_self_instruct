@@ -1,8 +1,8 @@
 ### Start Model 
-
+```
 ./scripts/start_model.sh 
-
-model path is the file path where gemma-7b is located
+```
+model path is the file path where gemma-7b is located, you need pass in your gemma parameters such as ./scripts/start_model.sh xxx
 
 ### Generate data
 
