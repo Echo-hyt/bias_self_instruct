@@ -40,3 +40,9 @@ data/gender.jsonl is the seed task path
 
 ### labeling
 The last row of the script all.sh - python . /self_instruct/label.py is the function that types the label. $1 and $2 are the paths to the files you want to generate with and without bias, respectively
+
+### Run all scripts with a single command
+./scripts/start_model.sh
+./scripts/all_8_bias.sh
+if port 11003 and port 11006 are free, you can run 
+./scripts/all_2_bias.sh
