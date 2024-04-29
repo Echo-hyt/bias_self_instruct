@@ -3,8 +3,8 @@ import argparse
 import jsonlines
 import openai
 import os
-from label_ins import generate_text_from_jsonl
-from label_cont import generate_instance_from_jsonl
+from label_ins import generate_instruction_from_jsonl
+from label_cont import generate_content_from_jsonl
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -16,25 +16,25 @@ def parse_args():
     parser.add_argument(
         "--output_instruction",
         type=str,
-        default = 'output_ins.jsonl',
+        default = 'data/temp/output_ins.jsonl',
         help="The instruction part of the output.",
     )
     parser.add_argument(
         "--output_content",
         type=str,
-        default='output_content.jsonl',
+        default='data/temp/output_content.jsonl',
         help="The instance part of the output.",
     )
     parser.add_argument(
         "--output_instruction_text",
         type=str,
-        default='output_instruction_text.txt',
+        default='data/temp/output_instruction_text',
         help="The output is a labeled text file",
     )
     parser.add_argument(
-        "--output_instance_text",
+        "--output_content_text",
         type=str,
-        default='output_instance_text.txt',
+        default='data/temp/output_content_text',
         help="The output is a labeled text file",
     )
     parser.add_argument(
@@ -51,18 +51,18 @@ def parse_args():
 
 
 args = parse_args()
-input = args.input_file
+input_file = args.input_file
 output_ins = args.output_instruction
-output_content = args.output_content
+output_cont = args.output_content
 output_instruction_text = args.output_instruction_text
-output_instance_text = args.output_instance_text
+output_content_text = args.output_content_text
 output_bias = args.output_bias
 output_non_bias = args.output_non_bias
 
-def split_instruction_content(input_file, output_instruction_file, output_content_file):
+def split_instruction_content(input_file, output_ins, output_cont):
     with open(input_file, 'r', encoding='utf-8') as f_in, \
-         open(output_instruction_file, 'w', encoding='utf-8') as f_out_instruction, \
-         open(output_content_file, 'w', encoding='utf-8') as f_out_content:
+         open(output_ins, 'w', encoding='utf-8') as f_out_instruction, \
+         open(output_cont, 'w', encoding='utf-8') as f_out_content:
         
         for line in f_in:
             data = json.loads(line.strip())
@@ -75,14 +75,16 @@ def split_instruction_content(input_file, output_instruction_file, output_conten
             # Write content to another file
             f_out_content.write(json.dumps({'content': content}, ensure_ascii=False) + '\n')
 
-split_instruction_content(input, output_ins, output_content)
+split_instruction_content(input_file, output_ins, output_cont)
 
-generate_text_from_jsonl(output_ins, output_instruction_text)
+generate_instruction_from_jsonl(output_ins, output_instruction_text)
 
-generate_instance_from_jsonl( output_content, output_instance_text)
+generate_content_from_jsonl(output_cont, output_content_text)
+
+
 
 # 读取两个txt文件
-with open(output_instruction_text, 'r') as file1, open(output_instance_text, 'r') as file2:
+with open(output_instruction_text, 'r') as file1, open(output_content_text, 'r') as file2:
     calls1 = file1.readlines()
     calls2 = file2.readlines()
 
@@ -112,7 +114,7 @@ for call1 in calls1:
 
 json_data = []       
 
-with open(input, 'r') as file:
+with open(input_file, 'r') as file:
     # 逐行读取文件内容
     for line in file:
         # 解析每行的 JSON 对象并将其添加到列表中
