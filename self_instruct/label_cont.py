@@ -6,7 +6,7 @@ import argparse
 
 
 
-openai.api_key = "sk-CERvFqRCxI9hLU6uEhUqTHuLQekgbbJ7XhAl4DpgyS0nYo3B"
+openai.api_key = "sk-Zq4r3GSy5RS10SD1laDWYrCOKEMJ0Q6OcN88kiW5XL6EuM62"
 
 openai.base_url = "https://api.chatanywhere.tech/v1/"
 
