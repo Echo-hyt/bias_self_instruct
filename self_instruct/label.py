@@ -28,13 +28,13 @@ def parse_args():
     parser.add_argument(
         "--output_instruction_text",
         type=str,
-        default='output_instruction_text',
+        default='output_instruction_text.txt',
         help="The output is a labeled text file",
     )
     parser.add_argument(
         "--output_instance_text",
         type=str,
-        default='output_instance_text',
+        default='output_instance_text.txt',
         help="The output is a labeled text file",
     )
     parser.add_argument(
