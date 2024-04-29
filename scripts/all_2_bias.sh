@@ -1,2 +1,2 @@
 ./scripts/culture.sh &
-./scripts/food.sh
+./scripts/food.sh 

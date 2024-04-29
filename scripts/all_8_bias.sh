@@ -5,4 +5,4 @@
 ./scripts/national.sh &
 ./scripts/mental.sh &
 ./scripts/job.sh &
-./scripts/intragroup.sh
+./scripts/intragroup.sh 
