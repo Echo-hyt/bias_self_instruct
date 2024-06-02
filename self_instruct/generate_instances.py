@@ -143,10 +143,12 @@ if __name__ == '__main__':
                 prompts = []
                 for task in batch:
                     if task_clf_types[task["instruction"]]:
-                        prompt = jailbreak[randint(0,1)] + output_first_template_for_clf + " " + task["instruction"].strip() + "\n"
+                        prompt = output_first_template_for_clf + " " + task["instruction"].strip() + "\n"
+                        # prompt = output_first_template_for_clf + " " + task["instruction"].strip() + "\n"
                         prompts.append(prompt)
                     else:
                         prompt = jailbreak[randint(0,1)] + input_first_template_for_gen + " " + task["instruction"].strip() + "\n"
+                        # prompt = input_first_template_for_gen + " " + task["instruction"].strip() + "\n"
                         prompts.append(prompt)
                 results = make_gpt3_requests(
                     engine=args.engine,
